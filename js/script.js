@@ -10,14 +10,13 @@
  */
 
 function enterClicked() {
-  
   //input
   const hourWorked = document.getElementById("hour-worked").value
   const perHour = document.getElementById("per-hour").value
   const incomeTax = 0.18
-  const takeHomeSalary = ( perHour * hourWorked ) - ( perHour * hourWorked * incomeTax )
+  const takeHomeSalary = perHour * hourWorked - perHour * hourWorked * incomeTax
   const govSalary = perHour * hourWorked * incomeTax
-  
+
   // output
   document.getElementById("money").innerHTML =
     "your pay is $" + takeHomeSalary.toFixed(2)
